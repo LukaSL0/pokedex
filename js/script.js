@@ -39,7 +39,7 @@ const getPokemon = async (setPokemon) => {
         if (data.types[0].type.name == 'grass') {
             div2.style.backgroundImage = 'url(../images/grass.png)';
         } else if (data.types[0].type.name == 'fire') {
-            div2.style.backgroundImage = 'url(https://github.com/LukaSL0/pokedex/blob/main/images/fire.png)';
+            div2.style.backgroundImage = 'url(../images/fire.avif)';
         } else if (data.types[0].type.name == 'water') {
             div2.style.backgroundImage = 'url(../images/water.png)';
         } else if (data.types[0].type.name == 'electric') {
