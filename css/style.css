@@ -59,7 +59,7 @@ input {
 /*--------------------------------------------------------------------------*/
 
 header {
-  background-color: #6586a7;
+  background-color: #52a9f5;
   padding: 5% 10%;
   display: block;
   text-align: center;
@@ -152,4 +152,13 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     margin-top: 22px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+@media screen and (max-width: 400px) {
+  button {
+    margin-left: 0;
+    margin-top: 16px;
+  }
 }

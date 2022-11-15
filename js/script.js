@@ -37,31 +37,31 @@ const getPokemon = async (setPokemon) => {
         div2.classList.add('default');
 
         if (data.types[0].type.name == 'grass') {
-            div2.style.backgroundImage = 'url(../images/grass.png)';
+            div2.style.backgroundImage = 'url(./images/grass.avif)';
         } else if (data.types[0].type.name == 'fire') {
-            div2.style.backgroundImage = 'url(../images/fire.png)';
+            div2.style.backgroundImage = 'url(./images/fire.avif)';
         } else if (data.types[0].type.name == 'water') {
-            div2.style.backgroundImage = 'url(../images/water.png)';
+            div2.style.backgroundImage = 'url(./images/water.avif)';
         } else if (data.types[0].type.name == 'electric') {
-            div2.style.backgroundImage = 'url(../images/electric.png)';
+            div2.style.backgroundImage = 'url(./images/electric.avif)';
         } else if (data.types[0].type.name == 'psychic') {
-            div2.style.backgroundImage = 'url(../images/psychic.png)';
+            div2.style.backgroundImage = 'url(./images/psychic.avif)';
         } else if (data.types[0].type.name == 'fighting') {
-            div2.style.backgroundImage = 'url(../images/fighting.png)';
+            div2.style.backgroundImage = 'url(./images/fighting.avif)';
         } else if (data.types[0].type.name == 'dark') {
-            div2.style.backgroundImage = 'url(../images/dark.png)';
+            div2.style.backgroundImage = 'url(./images/dark.avif)';
         } else if (data.types[0].type.name == 'steel') {
-            div2.style.backgroundImage = 'url(../images/steel.png)';
+            div2.style.backgroundImage = 'url(./images/steel.avif)';
         } else if (data.types[0].type.name == 'fairy') {
-            div2.style.backgroundImage = 'url(../images/fairy.png)';
+            div2.style.backgroundImage = 'url(./images/fairy.avif)';
         } else if (data.types[0].type.name == 'dragon') {
-            div2.style.backgroundImage = 'url(../images/dragon.png)';
+            div2.style.backgroundImage = 'url(./images/dragon.avif)';
         } else if (data.types[0].type.name == 'normal') {
-            div2.style.backgroundImage = 'url(../images/normal.png)';
+            div2.style.backgroundImage = 'url(./images/normal.avif)';
         } else if (data.types[0].type.name == 'ice') {
-            div2.style.backgroundImage = 'url(../images/water.png)';
+            div2.style.backgroundImage = 'url(./images/water.avif)';
         } else if (data.types[0].type.name == 'bug') {
-            div2.style.backgroundImage = 'url(../images/grass.png)';
+            div2.style.backgroundImage = 'url(./images/grass.avif)';
         }
         div.appendChild(div2);
     
