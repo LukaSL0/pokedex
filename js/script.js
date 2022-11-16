@@ -1,6 +1,7 @@
 const input = document.getElementById('input');
 const botao = document.getElementById('botao');
 const div = document.querySelector('.princ');
+const formSelector = document.getElementById('formselector');
 
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -20,7 +21,7 @@ const toggleLoader = () => {
     const loader = document.querySelector('.loader');
 
     loader.classList.toggle("hidden");
-};
+}
 
 const getPokemon = async (setPokemon) => {
     let pokemon = setPokemon.toLowerCase();
@@ -31,11 +32,8 @@ const getPokemon = async (setPokemon) => {
         const response = await fetch(api);
         const data = await response.json();
 
-        console.log(data);
-
         const div2 = document.createElement('div');
         div2.classList.add('default');
-
         if (data.types[0].type.name == 'grass') {
             div2.style.backgroundImage = 'url(./images/grass.avif)';
         } else if (data.types[0].type.name == 'fire') {
@@ -62,6 +60,12 @@ const getPokemon = async (setPokemon) => {
             div2.style.backgroundImage = 'url(./images/water.avif)';
         } else if (data.types[0].type.name == 'bug') {
             div2.style.backgroundImage = 'url(./images/grass.avif)';
+        } else if (data.types[0].type.name == 'poison') {
+            div2.style.backgroundImage = 'url(./images/psychic.avif)';
+        } else if (data.types[0].type.name == 'rock') {
+            div2.style.backgroundImage = 'url(./images/fighting.avif)';
+        } else {
+            div2.style.backgroundImage = 'url(./images/normal.avif)';
         }
         div.appendChild(div2);
     
@@ -91,7 +95,7 @@ const getPokemon = async (setPokemon) => {
             vida += 9;
         }
         const vidaP = document.createElement('p');
-        if (vida < '100') {
+        if (vida < 100) {
             vidaP.classList.add('vida1');
         } else if (vida > 99) {
             vidaP.classList.add('vida2');
@@ -101,7 +105,11 @@ const getPokemon = async (setPokemon) => {
 
         const img = document.createElement('img');
         img.classList.add('imgcenter');
-        img.src = data.sprites.front_default;
+        if (formSelector.value == 2) {
+            img.src = data.sprites.front_shiny;
+        } else {
+            img.src = data.sprites.front_default;
+        }
         div2.appendChild(img);
     
         input.value = "";
