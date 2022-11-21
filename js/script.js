@@ -19,7 +19,6 @@ botao.addEventListener('click', () => {
 
 const toggleLoader = () => {
     const loader = document.querySelector('.loader');
-
     loader.classList.toggle("hidden");
 }
 
@@ -94,6 +93,7 @@ const getPokemon = async (setPokemon) => {
         } else if ((vida % 10) == '1') {
             vida += 9;
         }
+
         const vidaP = document.createElement('p');
         if (vida < 100) {
             vidaP.classList.add('vida1');
